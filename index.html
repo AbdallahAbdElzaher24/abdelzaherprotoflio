@@ -13,7 +13,8 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 
-       
+            /* --- Variables & Core Styles (Cyan Palette Replacement) --- */
+            /* --- تعديل المسافات بين الـ Hero والـ About --- */
 #hero {
     min-height: auto; 
     padding-top: 180px; 
@@ -59,8 +60,10 @@
             * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
             body { background-color: var(--bg-dark); color: white; overflow-x: hidden; }
 
+            /* --- Backgrounds --- */
             #glow-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
             
+            /* --- Navigation (Cyan Accent) --- */
             nav {
                 position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between;
                 padding: 20px 8%; background: rgba(5, 8, 22, 0.7); backdrop-filter: blur(12px);
@@ -111,20 +114,102 @@
             .right::after { left: -10px; }
             .logo-container {
     display: inline-flex;
-    align-items: center;
-    gap: 12px;
+    align-items: center; /* يخلي السنتر بتاع الصورة مع السنتر بتاع النص */
+    gap: 12px; /* مسافة معقولة عشان الدنيا متكونش زحمة */
 }
 
 .favicon-img {
-    height: 4rem; 
+    height: 4rem; /* يخلي طولها ماشي مع طول الخط */
     width: auto;
+    /* لو الصورة مطفية جرب تضيف جلو بسيط زي النص */
     filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5)); 
+}
+.testimonials-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    padding: 40px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+
+.testimonial-card.active {
+    display: block;
+    opacity: 1;
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: var(--primary-cyan);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.client-name {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.client-title {
+    color: var(--primary-cyan);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.slider-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: transparent;
+    border: 2px solid var(--primary-cyan);
+    color: var(--primary-cyan);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: var(--primary-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--cyan-glow);
 }
             .timeline-content { padding: 25px; background: var(--card-bg); border-radius: 15px; transition: 0.4s; border-bottom: 4px solid var(--primary-cyan); }
             .timeline-content:hover { transform: scale(1.03); box-shadow: 0 0 20px var(--cyan-glow); }
             .timeline-content h3 { margin-bottom: 5px; font-size: 1.4rem; }
             .timeline-content .company { color: var(--primary-cyan); font-weight: 600; margin-bottom: 10px; display: block; }
             .timeline-content ul { list-style: disc; padding-left: 20px; color: var(--text-gray); font-size: 0.9rem; }
+/* تنسيق زرار الـ CV الجديد داخل الـ Hero */
 .cv-button-hero {
     display: inline-flex;
     align-items: center;
@@ -149,14 +234,17 @@
     transform: translateY(-3px);
 }
 
+/* تقليل مساحات السكاشن عشان الموقع ميبقاش طويل بزيادة */
 section {
-    min-height: auto; 
-    padding: 80px 10%; 
+    min-height: auto; /* بدل 100vh */
+    padding: 80px 10%; /* تقليل الـ Padding */
+}
 
 #hero {
     padding-top: 150px;
     padding-bottom: 60px;
 }
+            /* --- NEW: Services Cards (Matching target image & Cyan theme) --- */
             .services-wrapper { 
                 display: grid;
                 grid-template-columns: repeat(4, 1fr); 
@@ -203,6 +291,7 @@ section {
             .project-tags { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
             .tag { font-size: 0.8rem; color: var(--primary-cyan); font-weight: bold; }
 
+            /* --- NEW: CV Download Section (Matching target image) --- */
             .cv-download-section {
                 text-align: center;
                 padding: 10px 0;
@@ -229,6 +318,7 @@ section {
                 color: var(--primary-cyan);
             }
 
+            /* --- Contact Section --- */
             .contact-wrapper { display: flex; gap: 50px; flex-wrap: wrap; margin-top: 40px; }
     .contact-form { 
         flex: 0.8;
@@ -297,7 +387,7 @@ section {
             <p>I Humanize Data </p>
             
             <a href="https://drive.google.com/file/d/15gRV_RVUm-GXsFaDatmsIHjeW5WRBMW9/view?usp=drive_link" class="cv-button-hero">
-                <i class="fas fa-eye"></i> View My CV
+                <i class="fas fa-eye"></i> View  My CV
             </a>
         </div>
     </div>
@@ -475,7 +565,61 @@ statistical analysis to solve real-world business challenges.                </p
                 </div>
             </div>
         </section>
+<section id="testimonials">
+    <span class="sub-text">What others say</span>
+    <h2 class="head-text">Testimonials.</h2>
+    
+    <div class="testimonials-container">
+        <div class="testimonial-slider" id="testimonial-slider">
+            <div class="testimonial-card active">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"Abdallah is a monster in problem solving. His ability to optimize complex algorithms and his deep understanding of data structures makes him a valuable asset to any technical team."</p>
+                <h3 class="client-name">Mohamed Shikhon</h3>
+                <span class="client-title">Competitive Programmer & Colleague</span>
+            </div>
 
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"One of the most dedicated ML engineers I've worked with. He doesn't just build models; he understands the math behind them and focuses on interpretability."</p>
+                <h3 class="client-name">Abdelrahman M. Ibrahim</h3>
+                <span class="client-title">Data Scientist</span>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"Abdallah has a unique way of 'Humanizing Data'. His visualization skills in Power BI and Python turn boring numbers into a clear story for business decisions."</p>
+                <h3 class="client-name">Ahmed Mohamed</h3>
+                <span class="client-title">Software Engineer</span>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"Working with Abdallah on the Brain Tumor Detection project was eye-opening. His mastery of ResNet and Computer Vision is truly impressive."</p>
+                <h3 class="client-name">Ali Adel</h3>
+                <span class="client-title">AI Researcher</span>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"A proactive leader who bridges the gap between Data Engineering and Data Science perfectly. His MLOps mindset ensures models are production-ready."</p>
+                <h3 class="client-name">Abdullah Abou El-Dahab</h3>
+                <span class="client-title">Data Engineer</span>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"Abdallah's dedication during the ICPC training sessions was inspiring. He has a great talent for explaining complex AI concepts in a very simple way."</p>
+                <h3 class="client-name">Ziad Salah</h3>
+                <span class="client-title">ICPC Trainer</span>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="control-btn" onclick="prevTestimonial()"><i class="fas fa-chevron-left"></i></button>
+            <button class="control-btn" onclick="nextTestimonial()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
         
 
         <section id="contact"> <span class="sub-text">Stay in Touch</span>
@@ -537,7 +681,9 @@ statistical analysis to solve real-world business challenges.                </p
 </section>
 
         <script>
-       
+            // ---THREE.JS GLOW ACCENT COLOR REPLACEMENT (0x915eff -> 0x00FFFF) ---
+
+            /* --- 1. Background Particles (Stars) --- */
             
             let starScene, starCamera, starRenderer, stars;
             function initStars() {
@@ -567,6 +713,7 @@ statistical analysis to solve real-world business challenges.                </p
                 requestAnimationFrame(animateStars);
             }
 
+            /* --- 2. About Point Cloud --- */
 let aboutScene, aboutCamera, aboutRenderer, aboutPoints, aboutControls; 
 
 function initAbout() {
@@ -579,10 +726,12 @@ function initAbout() {
     aboutRenderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(aboutRenderer.domElement);
 
+    // --- إعدادات التحكم بالماوس ---
     aboutControls = new THREE.OrbitControls(aboutCamera, aboutRenderer.domElement);
     aboutControls.enableDamping = true; 
     aboutControls.dampingFactor = 0.05;
     
+    // التعديل هنا: منع الزووم مثل الـ Globe
     aboutControls.enableZoom = false; 
     
     aboutControls.autoRotate = true; 
@@ -596,12 +745,14 @@ function initAbout() {
     animateAbout();
 }
          function animateAbout() {
+    // تحديث التحكم
     if (aboutControls) aboutControls.update(); 
     
     aboutRenderer.render(aboutScene, aboutCamera);
     requestAnimationFrame(animateAbout);
 }
 
+            /* --- 3. Enhanced Glowing Globe --- */
             let globeScene, globeCamera, globeRenderer, globeMesh, globeControls;
             function initGlobe() {
                 let container = document.getElementById("globe-canvas-container");
@@ -622,13 +773,16 @@ function initAbout() {
                 let mat = new THREE.MeshPhongMaterial({ 
                     map: texture, 
                     shininess: 50,
+                    // تأثير انبعاث أزرق سماوي بدلاً من البنفسجي
                     emissive: 0x00FFFF,
                     emissiveIntensity: 0.2
                 });
                 globeMesh = new THREE.Mesh(geo, mat);
                 globeScene.add(globeMesh);
 
+                // Atmosphere Glow (Cyan Wireframe)
                 let glowGeo = new THREE.SphereGeometry(1.05, 64, 64);
+                // اللون الأزرق السماوي الجديد لشبكة الهالة المتوهجة
                 let glowMat = new THREE.MeshBasicMaterial({ color: 0x00FFFF, transparent: true, opacity: 0.1, wireframe: true });
                 let glowMesh = new THREE.Mesh(glowGeo, glowMat);
                 globeScene.add(glowMesh);
@@ -646,12 +800,14 @@ function initAbout() {
                 requestAnimationFrame(animateGlobe);
             }
 
+            // ---Initialization ---
             window.onload = () => {
                 initStars();
                 initAbout();
                 initGlobe();
             }
 
+            // ---Resize Handler ---
             window.onresize = () => {
                 starCamera.aspect = window.innerWidth / window.innerHeight;
                 starCamera.updateProjectionMatrix();
@@ -671,6 +827,7 @@ function initAbout() {
                     globeRenderer.setSize(containerG.clientWidth, containerG.clientHeight);
                 }
             }
+           // --- Form Submission Logic (Formspree) ---
 const contactForm = document.getElementById('contact-form');
 const submitBtn = document.querySelector('.submit-btn');
 
@@ -706,8 +863,43 @@ if (contactForm) {
         }
     });
 } 
+let currentTestimonial = 0;
+
+const slider = document.getElementById("testimonial-slider");
+const testimonials = document.querySelectorAll(".testimonial-card");
+
+let testimonialTimer;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+}
+
+function nextTestimonial() {
+    currentTestimonial++;
+    if (currentTestimonial >= testimonials.length) {
+        currentTestimonial = 0;
+    }
+    updateSlider();
+    resetTimer();
+}
+
+function prevTestimonial() {
+    currentTestimonial--;
+    if (currentTestimonial < 0) {
+        currentTestimonial = testimonials.length - 1;
+    }
+    updateSlider();
+    resetTimer();
+}
+
+function resetTimer() {
+    clearInterval(testimonialTimer);
+    testimonialTimer = setInterval(nextTestimonial, 5000);
+}
+
+testimonialTimer = setInterval(nextTestimonial, 5000);
+
         </script>
         
     </body>
-
     </html>     
