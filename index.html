@@ -300,11 +300,34 @@ section {
             .project-card {
                 background: var(--card-bg); border-radius: 20px; padding: 30px;
                 transition: 0.5s; border: 1px solid rgba(255,255,255,0.05);
+                display: flex;
+                flex-direction: column;
             }
             .project-card:hover { transform: translateY(-10px); border-color: var(--primary-cyan); box-shadow: 0 0 25px var(--cyan-glow); }
             .project-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
             .project-tags { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
             .tag { font-size: 0.8rem; color: var(--primary-cyan); font-weight: bold; }
+            .project-link {
+                margin-top: 20px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                width: fit-content;
+                padding: 10px 18px;
+                border-radius: 30px;
+                border: 2px solid var(--primary-cyan);
+                color: #fff;
+                text-decoration: none;
+                font-size: 0.85rem;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+            .project-link:hover {
+                background: var(--primary-cyan);
+                color: var(--bg-dark);
+                box-shadow: 0 0 15px var(--cyan-glow);
+                transform: translateY(-3px);
+            }
 
             .cv-download-section {
                 text-align: center;
@@ -536,6 +559,9 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <span class="tag">#DeepLearning</span>
                         <span class="tag">#ComputerVision</span>
                     </div>
+                    <a href="https://github.com/AbdallahAbdElzaher24/Brain-Tumor-Detection" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <div class="project-card">
                     <h3>Airbnb Market Analysis</h3>
@@ -544,6 +570,9 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <span class="tag">#DataAnalysis</span>
                         <span class="tag">#Python</span>
                     </div>
+                    <a href="https://github.com/AbdallahAbdElzaher24" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <div class="project-card">
                     <h3>ICPC Community Trainer</h3>
@@ -571,6 +600,9 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <span class="tag">#Scikit-Learn</span>
                         <span class="tag">#PredictiveModeling</span>
                     </div>
+                    <a href="https://github.com/AbdallahAbdElzaher24/Customer-churn" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <div class="project-card">
                     <h3>Unbeatable XO   </h3>
@@ -580,6 +612,9 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <span class="tag">#ArtificialIntelligence</span>
                         <span class="tag">#C++</span>
                     </div>
+                    <a href="https://github.com/AbdallahAbdElzaher24/Unbeaten-Ai-in-XO" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <div class="project-card">
                     <h3>500+ CP Problems</h3>
@@ -588,6 +623,18 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <span class="tag">#C++</span>
                         <span class="tag">#Algorithms</span>
                     </div>
+                </div>
+                <div class="project-card">
+                    <h3>Financial Reporting Pipeline</h3>
+                    <p>An end-to-end data pipeline built with Apache Airflow to automate daily financial reporting, using Python for transaction calculations and Bash for external script integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">#Airflow</span>
+                        <span class="tag">#Python</span>
+                        <span class="tag">#DataEngineering</span>
+                    </div>
+                    <a href="https://github.com/AbdallahAbdElzaher24/airflow_test_project" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
             </div>
         </section>
@@ -917,4 +964,4 @@ document.addEventListener("keydown", function(event) {
         </script>
         
     </body>
-    </html>     
+    </html>
