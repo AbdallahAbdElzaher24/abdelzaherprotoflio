@@ -116,86 +116,6 @@ gap: 12px;
 height: 4rem; 
 filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5)); 
 }
-.testimonials-container {
-position: relative;
-max-width: 800px;
-margin: 50px auto;
-text-align: center;
-overflow: hidden;
-}
-
-.testimonial-slider {
-display: flex;
-transition: transform 0.6s ease;
-}
-
-.testimonial-card {
-min-width: 100%;
-padding: 40px;
-background: var(--card-bg);
-border-radius: 20px;
-border: 1px solid rgba(0, 255, 255, 0.1);
-}
-
-
-.testimonial-card.active {
-display: block;
-opacity: 1;
-}
-
-.quote-icon {
-font-size: 2.5rem;
-color: var(--primary-cyan);
-margin-bottom: 20px;
-opacity: 0.5;
-}
-
-.testimonial-text {
-font-size: 1.2rem;
-line-height: 1.8;
-color: var(--text-gray);
-font-style: italic;
-margin-bottom: 25px;
-}
-
-.client-name {
-font-size: 1.4rem;
-color: #fff;
-margin-bottom: 5px;
-}
-
-.client-title {
-color: var(--primary-cyan);
-font-size: 0.9rem;
-font-weight: 600;
-}
-
-.slider-controls {
-margin-top: 30px;
-display: flex;
-justify-content: center;
-gap: 20px;
-}
-
-.control-btn {
-background: transparent;
-border: 2px solid var(--primary-cyan);
-color: var(--primary-cyan);
-width: 45px;
-height: 45px;
-border-radius: 50%;
-cursor: pointer;
-transition: 0.3s;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.control-btn:hover {
-background: var(--primary-cyan);
-color: var(--bg-dark);
-box-shadow: 0 0 15px var(--cyan-glow);
-}
         .timeline-content { padding: 25px; background: var(--card-bg); border-radius: 15px; transition: 0.4s; border-bottom: 4px solid var(--primary-cyan); }
         .timeline-content:hover { transform: scale(1.03); box-shadow: 0 0 20px var(--cyan-glow); }
         .timeline-content h3 { margin-bottom: 5px; font-size: 1.4rem; }
@@ -328,6 +248,13 @@ padding-bottom: 60px;
             box-shadow: 0 0 15px var(--cyan-glow);
             transform: translateY(-3px);
         }
+        .project-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .project-links .project-link { margin-top: 0; }
 
         .cv-download-section {
             text-align: center;
@@ -449,19 +376,33 @@ With 500+ competitive programming problems solved on Codeforces and LeetCode, I�
 This background enables me to design robust ML models and handle complex data scenarios with precision.
 </p>
 
-<p>
-After expanding my expertise through DEPI Data Engineering and NVIDIA’s training, I now focus on building scalable AI systems that transform raw data into production-ready solutions with real business impact.
-</p>
+
+
+
 
             <div class="skills-container">
                 <div class="skill-badge">Python</div>
                 <div class="skill-badge">Machine Learning</div>
                 <div class="skill-badge">Deep Learning</div>
                 <div class="skill-badge">Data Engineering</div>
-                <div class="skill-badge">C++</div>
+                <div class="skill-badge">NLP</div>
                 <div class="skill-badge">SQL</div>
                 <div class="skill-badge">Power BI</div>
                 <div class="skill-badge">Neural Networks</div>
+                <div class="skill-badge">Apache Airflow</div>
+                <div class="skill-badge"> ETL</div>
+                <div class="skill-badge">SSIS</div>
+                <div class="skill-badge">Azure</div>
+                <div class="skill-badge">Databricks</div>
+                <div class="skill-badge">LangChain</div>
+                <div class="skill-badge">Docker</div>
+                <div class="skill-badge">MongoDB</div>
+                <div class="skill-badge">Flask</div>
+                <div class="skill-badge">Power BI</div>
+                <div class="skill-badge">MLflow</div>
+                <div class="skill-badge">Snowflake</div>
+                <div class="skill-badge">Fabric</div>
+
             </div>
         </div>
     </section>
@@ -480,11 +421,11 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                 <h3>ML Development</h3>
                 <p>Building and deploying end-to-end Machine Learning pipelines and predictive models.</p>
             </div>
-            <div class="service-card-v2">
-                <i class="fas fa-microscope"></i>
-                <h3>Computer Vision</h3>
-                <p>Developing Deep Learning solutions for image classification and object detection.</p>
-            </div>
+           <div class="service-card-v2">
+    <i class="fas fa-language"></i>
+    <h3>NLP</h3>
+    <p>Developing advanced text analysis, sentiment analysis, and language modeling solutions.</p>
+</div>
             <div class="service-card-v2">
                 <i class="fas fa-database"></i>
                 <h3>Data Engineering</h3>
@@ -506,17 +447,8 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                     </ul>
                 </div>
             </div>
+            
             <div class="timeline-item right">
-                <div class="timeline-content">
-                    <h3>Machine Learning Trainee</h3>
-                    <span class="company">IBM SkillsBuild</span>
-                    <ul>
-                        <li>Developing LLM applications using prompt engineering.</li>
-                        <li>Mastering professional data analysis workflows.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item left">
                 <div class="timeline-content">
                     <h3>AI Data Engineering Trainee</h3>
                     <span class="company">DEPI (Digital Egypt Pioneers Initiative)</span>
@@ -525,8 +457,8 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                         <li>Proposing data-driven solutions for various products.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="timeline-item right">
+            </div>  
+            <div class="timeline-item left">
                 <div class="timeline-content">
                     <h3>ML and DL Trainee</h3>
                     <span class="company">Itida ideaspace</span>
@@ -536,17 +468,17 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item left">
+            <div class="timeline-item right">
                 <div class="timeline-content">
-                    <h3>Prompt Engineering , LLMs Trainee </h3>
-                    <span class="company">Itida Nvidia</span>
+                    <h3>Prompt Engineering , LLMs and RAG Systems Trainee </h3>
+                    <span class="company">ITI (Information Technology Institute) with Nvidia</span>
                     <ul>
                         <li>Mastered the art of crafting precise prompts </li>
-                        <li>Leveraging Large Language Models (LLMs) to automate complex tasks and generate high-quality, AI-driven solutions.</li>
+                        <li>Leveraging Large Language Models (LLMs) to automate complex tasks and generate high-quality, AI-driven solutions and building Retrieval-Augmented Generation (RAG) systems.</li>
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item right">
+            <div class="timeline-item left">
                 <div class="timeline-content">
                     <h3>Advanced Data Analysis Program</h3>
                     <span class="company">Tokyo University</span>
@@ -556,7 +488,7 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item left">
+            <div class="timeline-item right">
                 <div class="timeline-content">
                     <h3>NLP Trainee</h3>
                     <span class="company">NTI (National Telecommunication Institute)</span>
@@ -574,24 +506,56 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
         <h2 class="head-text">Projects.</h2>
         <div class="project-grid">
             <div class="project-card">
-                <h3>Brain Tumor Detection</h3>
-                <p>Medical AI system using ResNet50V2 to detect and classify brain tumors from MRI scans.</p>
+                <h3>SAIA — Stock &amp; Arrows Investing App</h3>
+                <p>An AI-powered stock direction advisor built around one simple idea: every stock is either pointed up or pointed down. SAIA combines real market data with AI analysis to make that direction obvious before you invest.</p>
+                <div class="project-tags">
+                    <span class="tag">#AI</span>
+                    <span class="tag">#FinTech</span>
+                    <span class="tag">#StockMarket</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://saia-production-af55.up.railway.app/" target="_blank" class="project-link">
+                        <i class="fas fa-rocket"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/AbdallahAbdElzaher24/SAIA" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Brain Tumor Detection from MRI Scans</h3>
+                <p>End-to-end medical imaging pipeline using transfer learning with ResNet50V2 to detect and classify brain tumors (Glioma, Meningioma, Pituitary) from MRI scans. Includes a custom augmentation pipeline, two-stage fine-tuning, bounding-box localization, and Grad-CAM explainability to visualize what the model "sees" — achieving 99% accuracy and 100% sensitivity on tumor cases.</p>
                 <div class="project-tags">
                     <span class="tag">#DeepLearning</span>
                     <span class="tag">#ComputerVision</span>
+                    <span class="tag">#MedicalAI</span>
+                    <span class="tag">#ExplainableAI</span>
                 </div>
                 <a href="https://github.com/AbdallahAbdElzaher24/Brain-Tumor-Detection" target="_blank" class="project-link">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
             <div class="project-card">
-                <h3>Airbnb Market Analysis</h3>
-                <p>Comprehensive exploratory data analysis (EDA) to identify pricing trends, seasonal demand, and key factors affecting property ratings in major cities.</p>
+                <h3>Unified Football Scouting System</h3>
+                <p>An ML pipeline that predicts football players' market value and performance tier, combining regression models (Ridge, Lasso, SVR, Random Forest, Stacking) with classification models (KNN, SVM, XGBoost, Voting Classifier) and automated model comparison.</p>
                 <div class="project-tags">
-                    <span class="tag">#DataAnalysis</span>
-                    <span class="tag">#Python</span>
+                    <span class="tag">#MachineLearning</span>
+                    <span class="tag">#XGBoost</span>
+                    <span class="tag">#SportsAnalytics</span>
                 </div>
-                <a href="https://github.com/AbdallahAbdElzaher24" target="_blank" class="project-link">
+                <a href="https://github.com/AbdallahAbdElzaher24/FIFA" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+            <div class="project-card">
+                <h3>Bank Customer Churn Risk System</h3>
+                <p>A hybrid churn analysis system combining K-Medoids and Hierarchical Clustering with Fuzzy Logic risk scoring, plus a Genetic Algorithm for feature selection, to flag at-risk bank customers.</p>
+                <div class="project-tags">
+                    <span class="tag">#Clustering</span>
+                    <span class="tag">#FuzzyLogic</span>
+                    <span class="tag">#GeneticAlgorithm</span>
+                </div>
+                <a href="https://github.com/AbdallahAbdElzaher24/Bank-Customer-Churn" target="_blank" class="project-link">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
@@ -631,6 +595,18 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
+            <div class="project-card">
+                <h3>Telecom ETL Pipeline (SSIS)</h3>
+                <p>An automated ETL pipeline for telecom data built with SSIS, featuring a dynamic Foreach Loop for file ingestion, complex transformations (TAC/SNR engineering), and robust error handling that redirects noisy data while preserving auditing and logging.</p>
+                <div class="project-tags">
+                    <span class="tag">#SSIS</span>
+                    <span class="tag">#ETL</span>
+                    <span class="tag">#SQLServer</span>
+                </div>
+                <a href="https://github.com/AbdallahAbdElzaher24/SSISTelcom_project" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
         </div>
     </section>
 
@@ -647,15 +623,7 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
                     <span class="tag">#Algorithms</span>
                 </div>
             </div>
-            <div class="project-card">
-                <h3>Academic Management System</h3>
-                <p>Relational database design and optimization for a faculty environment, handling complex schemas for student enrollment, courses, and faculty schedules.</p>
-                <div class="project-tags">
-                    <span class="tag">#SQL</span>
-                    <span class="tag">#DatabaseDesign</span>
-                    <span class="tag">#SQLServer</span>
-                </div>
-            </div>
+            
             <div class="project-card">
                 <h3>500+ CP Problems</h3>
                 <p>Mastered complex algorithms and data structures on Codeforces and LeetCode.</p>
@@ -667,62 +635,6 @@ After expanding my expertise through DEPI Data Engineering and NVIDIA’s traini
         </div>
     </section>
 
-<section id="testimonials">
-<span class="sub-text">What others say</span>
-<h2 class="head-text">Testimonials.</h2>
-
-<div class="testimonials-container">
-    <div class="testimonial-slider" id="testimonial-slider">
-        <div class="testimonial-card active">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"Abdallah is a monster in problem solving. His ability to optimize complex algorithms and his deep understanding of data structures makes him a valuable asset to any technical team."</p>
-            <h3 class="client-name">Mohamed Shikhon</h3>
-            <span class="client-title">Competitive Programmer & Colleague</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"One of the most dedicated ML engineers I've worked with. He doesn't just build models; he understands the math behind them and focuses on interpretability."</p>
-            <h3 class="client-name">Abdelrahman M. Ibrahim</h3>
-            <span class="client-title">Data Scientist</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"Abdallah has a unique way of 'Humanizing Data'. His visualization skills in Power BI and Python turn boring numbers into a clear story for business decisions."</p>
-            <h3 class="client-name">Ahmed Mohamed</h3>
-            <span class="client-title">Software Engineer</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"Working with Abdallah on the Brain Tumor Detection project was eye-opening. His mastery of ResNet and Computer Vision is truly impressive."</p>
-            <h3 class="client-name">Ali Adel</h3>
-            <span class="client-title">AI Researcher</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"A proactive leader who bridges the gap between Data Engineering and Data Science perfectly. His MLOps mindset ensures models are production-ready."</p>
-            <h3 class="client-name">Abdullah Abou El-Dahab</h3>
-            <span class="client-title">Data Engineer</span>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">"Abdallah's dedication during the ICPC training sessions was inspiring. He has a great talent for explaining complex AI concepts in a very simple way."</p>
-            <h3 class="client-name">Ziad Salah</h3>
-            <span class="client-title">ICPC Trainer</span>
-        </div>
-    </div>
-
-    <div class="slider-controls">
-        <button class="control-btn" onclick="prevTestimonial()"><i class="fas fa-chevron-left"></i></button>
-        <button class="control-btn" onclick="nextTestimonial()"><i class="fas fa-chevron-right"></i></button>
-    </div>
-</div>
-</section>
-    
 
     <section id="contact"> <span class="sub-text">Stay in Touch</span>
 <h2 class="head-text">Contact.</h2>
@@ -941,53 +853,7 @@ contactForm.addEventListener('submit', async function(e) {
         submitBtn.style.opacity = '1';
     }
 });
-} 
-let currentTestimonial = 0;
-
-const slider = document.getElementById("testimonial-slider");
-const testimonials = document.querySelectorAll(".testimonial-card");
-
-let testimonialTimer;
-
-function updateSlider() {
-slider.style.transform = `translateX(-${currentTestimonial * 100}%)`;
 }
-
-function nextTestimonial() {
-currentTestimonial++;
-if (currentTestimonial >= testimonials.length) {
-    currentTestimonial = 0;
-}
-updateSlider();
-resetTimer();
-}
-
-function prevTestimonial() {
-currentTestimonial--;
-if (currentTestimonial < 0) {
-    currentTestimonial = testimonials.length - 1;
-}
-updateSlider();
-resetTimer();
-}
-
-function resetTimer() {
-clearInterval(testimonialTimer);
-testimonialTimer = setInterval(nextTestimonial, 5000);
-}
-
-testimonialTimer = setInterval(nextTestimonial, 5000);
-document.addEventListener("keydown", function(event) {
-
-if (event.key === "ArrowRight") {
-    nextTestimonial();
-}
-
-if (event.key === "ArrowLeft") {
-    prevTestimonial();
-}
-
-});
 
     </script>
     
