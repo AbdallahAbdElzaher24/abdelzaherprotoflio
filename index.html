@@ -35,17 +35,7 @@
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-.hero-buttons .cv-button-hero { margin-top: 0; }
 
-@media (max-width: 900px) {
-    .hero-buttons { justify-content: center; }
-}
 .simple-contact-info p {
     color: var(--text-gray);
     font-size: 0.9rem;
@@ -171,6 +161,16 @@ color: var(--bg-dark);
 box-shadow: 0 0 20px var(--cyan-glow);
 transform: translateY(-3px);
 }
+
+/* Hero buttons group (CV + Certificates) */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.hero-buttons .cv-button-hero { margin-top: 0; }
+
 @media (max-width: 900px) {
 .hero-container {
     flex-direction: column;
@@ -181,6 +181,8 @@ transform: translateY(-3px);
     width: 220px;
     margin-top: 20px;
 }
+
+.hero-buttons { justify-content: center; }
 }
 section {
 min-height: auto; 
@@ -360,13 +362,14 @@ Abdallah <span>| AI Developer</span>
     <p>I Humanize Data </p>
     
     <div class="hero-buttons">
-    <a href="https://drive.google.com/file/d/1fmdMU0EJzgb2kcVgXT2C62zOEj1Hk_PB/view?usp=sharing" target="_blank" class="cv-button-hero">
-        <i class="fas fa-eye"></i> View My CV
-    </a>
+        <a href="https://drive.google.com/file/d/1fmdMU0EJzgb2kcVgXT2C62zOEj1Hk_PB/view?usp=sharing" target="_blank" class="cv-button-hero">
+            <i class="fas fa-eye"></i> View My CV
+        </a>
 
-    <a href="https://drive.google.com/drive/folders/1AV0HqQ0ZLBVpjy04rqWar5ZjZfXUC9ss" target="_blank" class="cv-button-hero">
-        <i class="fas fa-certificate"></i> View My Certificates
-    </a>
+        <a href="https://drive.google.com/drive/folders/1AV0HqQ0ZLBVpjy04rqWar5ZjZfXUC9ss" target="_blank" class="cv-button-hero">
+            <i class="fas fa-certificate"></i> View My Certificates
+        </a>
+    </div>
 </div>
 
 <div class="hero-image">
